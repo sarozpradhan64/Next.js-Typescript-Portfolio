@@ -7,8 +7,6 @@ import Link from "next/link";
 import CardSkeleton from "./skeleton/CardSkeleton";
 import SectionTitle from "./SectionTitle";
 
-
-
 function HighlightedProject({ featuredWorks }) {
   return (
     <div className="mt-32">
@@ -27,8 +25,12 @@ function HighlightedProject({ featuredWorks }) {
 
       <div className="mt-8">
         {featuredWorks && featuredWorks.length >= 1 ? (
-          <div className={"grid lg:grid-cols-3 md:grid-cols-2 md:gap-x-5 md:gap-5 gap-4"}>
-            {featuredWorks.map((work, index) => (
+          <div
+            className={
+              "grid lg:grid-cols-3 md:grid-cols-2 md:gap-x-5 md:gap-5 gap-4"
+            }
+          >
+            {featuredWorks.slice(0, 3).map((work, index) => (
               <RevealOnScroll
                 key={index}
                 className="portfolio-item"
