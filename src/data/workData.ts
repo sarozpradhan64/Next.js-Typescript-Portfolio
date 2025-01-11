@@ -121,7 +121,7 @@ const workData = [
   {
     "title": "TodoApp",
     "slug": "todo-app",
-    "type": "mini",
+    "type": "open source",
     "year": "2020",
     "href": "https://blaze-todo-app.netlify.app/",
     "source": "https://github.com/sarozpradhan64/React-TodoApp",
