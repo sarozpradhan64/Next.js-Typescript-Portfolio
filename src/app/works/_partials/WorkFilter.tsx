@@ -1,6 +1,7 @@
 "use client";
 
 import RevealOnScroll from "@/components/Reveal";
+import { strTitle } from "@/utils/helpers/stringHelper";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useCallback } from "react";
@@ -13,7 +14,7 @@ function FilterButton({ filter, active, onClick }) {
       }`}
       onClick={() => onClick(filter)}
     >
-      {filter === "all" ? "All Projects" : filter}
+      {filter === "all" ? "All Projects" : strTitle(filter)}
     </li>
   );
 }
@@ -58,8 +59,11 @@ export default function WorkFilter({ works }) {
   return (
     <>
       <div className="mb-12">
-        <ul className="md:flex md:justify-center list-inline mb-0" id="portfolio-filters">
-          {["all", "website", "software", "mobile", "mini"].map((filter) => (
+        <ul
+          className="md:flex md:justify-center list-inline mb-0"
+          id="portfolio-filters"
+        >
+          {["all", "software", "website", "mobile", "open source"].map((filter) => (
             <FilterButton
               key={filter}
               filter={filter}

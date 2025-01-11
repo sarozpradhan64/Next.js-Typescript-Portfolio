@@ -3,8 +3,7 @@ import WorkFilter from "./_partials/WorkFilter";
 import workData from "@/data/workData";
 
 export default async function Page() {
-  
-  const works = workData
+  const works = workData;
 
   return (
     <FrontendLayout title="Works">
