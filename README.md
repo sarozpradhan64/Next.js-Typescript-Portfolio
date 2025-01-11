@@ -17,9 +17,9 @@ npm install
 - Create .env.local file in root directory and Add the Email.js secret Keys for contact form submission.
 
 ``` 
-EMAIL_JS_SERVICE_ID=
-EMAIL_JS_PUBLIC_KEY=
-EMAIL_JS_TEMPLATE_ID=
+NEXT_PUBLIC_EMAIL_JS_SERVICE_ID=
+NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY=
+NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID=
 ```
 
 - Start the development Server
