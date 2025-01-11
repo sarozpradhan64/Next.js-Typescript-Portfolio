@@ -4,22 +4,22 @@ const data = {
     {
       title: "github",
       href: "https://github.com/sarozpradhan64",
-      icon: <i className="fab fa-github"></i>,
+      icon: "fab fa-github",
     },
     {
       title: "linkedin",
       href: "https://www.linkedin.com/in/saroj-pradhan-4628831a1/",
-      icon: <i className="fab fa-linkedin-in"></i>,
+      icon: "fab fa-linkedin-in",
     },
     {
       title: "facebook",
       href: "https://facebook.com/srz.prdhn",
-      icon: <i className="fab fa-facebook-f"></i>,
+      icon: "fab fa-facebook-f",
     },
     {
       title: "instagram",
       href: "https://instagram.com/srz.prdhn",
-      icon: <i className="fab fa-instagram"></i>,
+      icon: "fab fa-instagram",
     },
   ],
 
@@ -27,23 +27,23 @@ const data = {
     {
       title: "home",
       href: "/",
-      icon: <i className="fa-solid fa-home"></i>,
+      icon: "fa-solid fa-home",
     },
 
     {
       title: "works",
       href: "/works",
-      icon: <i className="fa-solid fa-briefcase"></i>,
+      icon: "fa-solid fa-briefcase",
     },
     {
       title: "blogs",
       href: "/blogs",
-      icon: <i className="fa-solid fa-note-sticky"></i>,
+      icon: "fa-solid fa-note-sticky",
     },
     {
       title: "contact",
       href: "/contact",
-      icon: <i className="fa-solid fa-address-book"></i>,
+      icon: "fa-solid fa-address-book",
     },
   ],
 
