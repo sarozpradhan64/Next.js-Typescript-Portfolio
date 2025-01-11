@@ -35,11 +35,11 @@ const data = {
       href: "/works",
       icon: "fa-solid fa-briefcase",
     },
-    {
-      title: "blogs",
-      href: "/blogs",
-      icon: "fa-solid fa-note-sticky",
-    },
+    // {
+    //   title: "blogs",
+    //   href: "/blogs",
+    //   icon: "fa-solid fa-note-sticky",
+    // },
     {
       title: "contact",
       href: "/contact",
