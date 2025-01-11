@@ -40,11 +40,11 @@ export default function Contact() {
     // Send email if validation passes
     emailjs
       .sendForm(
-        process.env.EMAIL_JS_SERVICE_ID,
-        process.env.EMAIL_JS_TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID,
         form.current,
         {
-          publicKey: process.env.EMAIL_JS_PUBLIC_KEY,
+          publicKey: process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY,
         }
       )
       .then(

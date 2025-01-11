@@ -89,7 +89,9 @@ const Navigation = () => {
                           : ""
                       } mobile-nav-item text-white flex justify-center items-center py-4`}
           >
-            <div className="me-2">{link.icon}</div>
+            <div className="me-2">
+              <i className={link.icon}></i>
+            </div>
 
             <span style={{ fontSize: "12px" }}>{link.title.toUpperCase()}</span>
           </Link>
