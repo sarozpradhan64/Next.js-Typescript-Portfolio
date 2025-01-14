@@ -1,28 +1,4 @@
 const data = {
-  socials: [
-    // icon uses fontawesome classes
-    {
-      title: "github",
-      href: "https://github.com/sarozpradhan64",
-      icon: "fab fa-github",
-    },
-    {
-      title: "linkedin",
-      href: "https://www.linkedin.com/in/saroj-pradhan-4628831a1/",
-      icon: "fab fa-linkedin-in",
-    },
-    {
-      title: "facebook",
-      href: "https://facebook.com/srz.prdhn",
-      icon: "fab fa-facebook-f",
-    },
-    {
-      title: "instagram",
-      href: "https://instagram.com/srz.prdhn",
-      icon: "fab fa-instagram",
-    },
-  ],
-
   routes: [
     {
       title: "home",
