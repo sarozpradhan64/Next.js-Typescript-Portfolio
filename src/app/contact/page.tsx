@@ -55,7 +55,6 @@ export default function Contact() {
           setIsLoading(false);
         },
         (error) => {
-          console.log("FAILED...", error);
           setMessage({ success: false, message: error });
           setIsLoading(false);
           setErrors({});
