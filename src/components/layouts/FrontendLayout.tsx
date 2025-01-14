@@ -4,9 +4,8 @@ import React from "react";
 import Meta from "../Meta";
 import data from "@/data/data";
 import metas from "@/data/metaData";
-import ScrollToTop from "../ScrollToTop";
-import Button from "../Button";
 import Navigation from "./Navigation";
+import { strTitle } from "@/utils/helpers/stringHelper";
 
 export default function FrontendLayout({
   children,
@@ -53,7 +52,7 @@ export default function FrontendLayout({
             </Link>
           </div>
 
-          <div className="flex justify-center text-center md:text-start my-3">
+          <div className="flex justify-center text-center gap-4 md:text-start my-3">
             {socials.map((social, index) => (
               <a
                 key={index}
@@ -61,10 +60,10 @@ export default function FrontendLayout({
                 className="mx-1"
                 href={social.href}
                 target={"_blank"}
+                title={strTitle(social.title)}
               >
-                <Button color="transparent" size="md">
-                  <i className={social.icon}></i>
-                </Button>
+                <i className={social.icon}></i>
+                <span className="sr-only">{social.title}</span>
               </a>
             ))}
           </div>
