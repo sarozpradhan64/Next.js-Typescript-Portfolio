@@ -67,9 +67,9 @@ export default function Contact() {
     <FrontendLayout metaTitle="">
       <div className="relative isolate">
         <div className="mx-auto max-w-xl lg:max-w-4xl">
-          <h2 className="text-4xl font-bold tracking-tight text-white">
+          <h1 className="text-4xl font-bold tracking-tight text-white">
             Let&apos;s talk about your project
-          </h2>
+          </h1>
           <p className="mt-2 text-lg leading-8 text-gray-400">
             Got a Project in Mind? Get in Touch.
           </p>
