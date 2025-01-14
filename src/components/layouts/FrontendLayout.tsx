@@ -6,6 +6,7 @@ import data from "@/data/data";
 import metas from "@/data/metaData";
 import Navigation from "./Navigation";
 import { strTitle } from "@/utils/helpers/stringHelper";
+import { Facebook, Github, Instagram, Linkedin } from "lucide-react";
 
 export default function FrontendLayout({
   children,
@@ -13,7 +14,29 @@ export default function FrontendLayout({
   metaTitle,
   description,
 }) {
-  const socials = data.socials;
+  const socials = [
+    // icon uses fontawesome classes
+    {
+      title: "github",
+      href: "https://github.com/sarozpradhan64",
+      icon: <Github className="w-4" />,
+    },
+    {
+      title: "linkedin",
+      href: "https://www.linkedin.com/in/saroj-pradhan-4628831a1/",
+      icon: <Linkedin className="w-4" />,
+    },
+    {
+      title: "facebook",
+      href: "https://facebook.com/srz.prdhn",
+      icon: <Facebook className="w-4" />,
+    },
+    {
+      title: "instagram",
+      href: "https://instagram.com/srz.prdhn",
+      icon: <Instagram className="w-4" />,
+    },
+  ];
 
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
@@ -62,7 +85,7 @@ export default function FrontendLayout({
                 target={"_blank"}
                 title={strTitle(social.title)}
               >
-                <i className={social.icon}></i>
+                {social.icon}
                 <span className="sr-only">{social.title}</span>
               </a>
             ))}
