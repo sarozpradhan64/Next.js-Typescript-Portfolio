@@ -50,6 +50,11 @@ const skillData = [
     link: "https://fastapi.tiangolo.com/",
   },
   {
+    path: "/img/skills/graphql.png",
+    title: "GraphQL",
+    link: "https://graphql.org/",
+  },
+  {
     path: "/img/skills/php.png",
     title: "PHP",
     link: "https://www.php.net/",
@@ -88,6 +93,11 @@ const skillData = [
     path: "/img/skills/Postman.png",
     title: "Postman",
     link: "https://www.postman.com/",
+  },
+  {
+    path: "/img/skills/kafka.png",
+    title: "Kafka",
+    link: "https://kafka.apache.org",
   },
   {
     path: "/img/skills/Docker.png",
