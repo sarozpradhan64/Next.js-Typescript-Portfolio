@@ -6,17 +6,22 @@ import WorkDetailSkeleton from "@/components/skeleton/WorkDetailSkeleton";
 import ShareButton from "../_partials/ShareButton";
 import workData from "@/data/workData";
 import { Code, ExternalLink, MoveLeft } from "lucide-react";
+import { Work } from "@/types/work";
 
-export default async function Page(props) {
-  const params = await props.params;
-  let works;
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const slug = (await params).slug;
+  let works: null | Work[] = null;
   try {
     works = workData;
   } catch (error) {
     console.error("Error fetching works:", error);
   }
 
-  const work = works ? works.find((w) => params.slug === w.slug) : {};
+  const work: Work | null = works?.find((w) => slug === w.slug) || null;
 
   return (
     <FrontendLayout title={`${work?.title || ""}`}>
@@ -83,14 +88,14 @@ export default async function Page(props) {
                   </a>
                 )}
 
-                {work.source !== "" && (
+                {work.source && (
                   <a
                     href={work.source}
                     target="_blank"
                     rel="noreferrer"
                     className="md:mx-2 text-primary"
                   >
-                  <Code className="w-4 inline me-2" />
+                    <Code className="w-4 inline me-2" />
                     Source Code
                   </a>
                 )}
