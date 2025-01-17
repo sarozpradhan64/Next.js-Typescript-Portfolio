@@ -57,7 +57,7 @@ const FrontendLayout: React.FC<FrontendLayoutProps> = ({
 
   return (
     <>
-      <Meta title={metaTitle ? metaTitle : title} description={description} />
+      <Meta title={metaTitle || title || ""} description={description || ""} />
 
       <Navigation />
 
