@@ -1,27 +1,4 @@
 const data = {
-  routes: [
-    {
-      title: "home",
-      href: "/",
-      icon: "fa-solid fa-home",
-    },
-
-    {
-      title: "works",
-      href: "/works",
-      icon: "fa-solid fa-briefcase",
-    },
-    // {
-    //   title: "blogs",
-    //   href: "/blogs",
-    //   icon: "fa-solid fa-note-sticky",
-    // },
-    {
-      title: "contact",
-      href: "/contact",
-      icon: "fa-solid fa-address-book",
-    },
-  ],
 
   services: [
     {
