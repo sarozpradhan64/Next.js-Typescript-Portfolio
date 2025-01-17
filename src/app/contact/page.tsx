@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { FormEvent, useRef, useState } from "react";
 import FrontendLayout from "@/components/layouts/FrontendLayout";
 import metas from "@/data/metaData";
 import emailjs from "@emailjs/browser";
@@ -10,24 +10,28 @@ import {
 } from "@heroicons/react/20/solid";
 
 export default function Contact() {
-  const form = useRef();
-  const [message, setMessage] = useState(null);
-  const [errors, setErrors] = useState({});
+  const form = useRef<HTMLFormElement | null>(null);
+  const [message, setMessage] = useState<{
+    success: boolean;
+    message: string;
+  } | null>(null);
+  const [errors, setErrors] = useState<Record<string, string>>({});
   const [isLoading, setIsLoading] = useState(false);
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!form.current) return;
 
     setIsLoading(true);
 
     // Validate form fields
-    const formData = new FormData(form.current);
-    const newErrors = {};
+    const formData = new FormData(e.currentTarget);
+    const newErrors: Record<string, string> = {};
 
     for (const [key, value] of formData.entries()) {
       if (!value) {
         newErrors[key] = `The ${key.replace("_", " ")} is required.`;
-      } else if (key === "email" && !/\S+@\S+\.\S+/.test(value)) {
+      } else if (key === "email" && !/\S+@\S+\.\S+/.test(value as string)) {
         newErrors[key] = `The email is not valid.`;
       }
     }
@@ -40,8 +44,8 @@ export default function Contact() {
     // Send email if validation passes
     emailjs
       .sendForm(
-        process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID as string,
         form.current,
         {
           publicKey: process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY,
@@ -49,7 +53,7 @@ export default function Contact() {
       )
       .then(
         () => {
-          form.current.reset();
+          form.current?.reset();
           setMessage({ success: true, message: "Message sent successfully." });
           setErrors({});
           setIsLoading(false);
