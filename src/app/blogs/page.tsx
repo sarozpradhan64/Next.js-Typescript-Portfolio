@@ -12,7 +12,7 @@ async function getPosts() {
   return response.json();
 }
 
-function BlogPost({ post }) {
+function BlogPost({ post }: { post: Blog }) {
   return (
     <RevealOnScroll className="md:mb-0 mb-8" revealGroupName="blog-card">
       <div className="rounded relative" style={{ minHeight: "200px" }}>
@@ -68,7 +68,7 @@ export default async function Page() {
         </div>
       ) : posts.length >= 1 ? (
         <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 md:gap-5">
-          {posts.map((post) => (
+          {posts.map((post: Blog) => (
             <BlogPost key={post.id} post={post} />
           ))}
         </div>

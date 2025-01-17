@@ -17,7 +17,11 @@ const righteous = Righteous({
   display: "swap",
 });
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className={`${poppins.variable} ${righteous.variable}`}>
       <body>{children}</body>

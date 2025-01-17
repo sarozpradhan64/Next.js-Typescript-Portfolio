@@ -1,6 +1,6 @@
 import React from "react";
 
-const SectionTitle = ({ title }) => {
+const SectionTitle = ({ title }: { title: string }) => {
   return (
     <div>
       <h2 className="mb-3 text-2xl font-medium text-white">{title}</h2>

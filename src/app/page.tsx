@@ -25,8 +25,8 @@ export default async function Home() {
           <h3 className="text-3xl text-primary mb-3 font-bold">
             Hi 👋, I&apos;m
           </h3>
-          <h1 className="text-6xl mb-8 text-white">{metas.user.name}</h1>
-          <h2 className="text-3xl text-white inline text-secondary">
+          <h1 className="text-6xl mb-8 text-white font-medium">{metas.user.name}</h1>
+          <h2 className="text-3xl inline text-secondary">
             {metas.user.whoAmI}
           </h2>
           <div className="text-light hidden">
@@ -39,7 +39,7 @@ export default async function Home() {
             </Link>
 
             <Link href="/works">
-              <Button color="secondary">Explore My Works</Button>
+              <Button color="light">Explore My Works</Button>
             </Link>
           </div>
         </div>

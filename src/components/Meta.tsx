@@ -1,7 +1,13 @@
 import React from "react";
 import metas from "@/data/metaData";
 
-export default function Meta({ title, description }) {
+export default function Meta({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
   return (
     <>
       <title>{title ? `${title} | ${metas.title}` : metas.title}</title>
@@ -26,6 +32,6 @@ export default function Meta({ title, description }) {
       <meta name="language" content="English" />
       <meta name="revisit-after" content="2 days" />
       <meta name="author" content={metas.user.name} />
-      </>
+    </>
   );
 }
