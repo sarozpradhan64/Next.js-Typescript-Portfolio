@@ -15,12 +15,19 @@ import {
   Linkedin,
 } from "lucide-react";
 
-export default function FrontendLayout({
+interface FrontendLayoutProps {
+  title?: string;
+  metaTitle?: string;
+  description?: string;
+  children: React.ReactNode;
+}
+
+const FrontendLayout: React.FC<FrontendLayoutProps> = ({
   children,
   title,
   metaTitle,
   description,
-}) {
+}) => {
   const socials = [
     // icon uses fontawesome classes
     {
@@ -62,7 +69,11 @@ export default function FrontendLayout({
             {title && (
               <div className="mb-6">
                 <h1 className="text-2xl mb-0 text-white">
-                  <ChevronRight className=" inline me-2 animate-bounce" size={32} /> {title}
+                  <ChevronRight
+                    className=" inline me-2 animate-bounce"
+                    size={32}
+                  />{" "}
+                  {title}
                 </h1>
               </div>
             )}
@@ -76,7 +87,7 @@ export default function FrontendLayout({
         <div className="md:mt-32 mt-16 md:mb-0 mb-4 border-t border-gray-600"></div>
         <div className="flex md:flex-row flex-col items-center justify-between text-white py-4 md:mb-0 mb-16">
           <div className="text-center md:text-start mb-3 md:mb-0">
-          <Copyright className="inline w-4 me-1" /> {currentYear} |&nbsp;
+            <Copyright className="inline w-4 me-1" /> {currentYear} |&nbsp;
             <Link className="border-bottom text-secondary" href="/">
               {metas.user.name}
             </Link>
@@ -101,4 +112,6 @@ export default function FrontendLayout({
       </div>
     </>
   );
-}
+};
+
+export default FrontendLayout;
