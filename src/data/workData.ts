@@ -18,7 +18,7 @@ const workData = [
     slug: "confession-area",
     type: "software",
     year: "2024",
-    href: "https://employer.kumarijob.com",
+    href: "https://confessionarea.com",
     source: "",
     image: "/img/works/confession_area.png",
     description:
