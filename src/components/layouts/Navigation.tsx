@@ -3,9 +3,27 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import data from "@/data/data";
+import { BriefcaseBusiness, House, Mail } from "lucide-react";
 
 const Navigation = () => {
-  const links = data.routes;
+  const links = [
+    {
+      title: "home",
+      href: "/",
+      icon: <House className="w-4 inline me-4" />,
+    },
+
+    {
+      title: "works",
+      href: "/works",
+      icon: <BriefcaseBusiness className="w-4 inline me-4" />,
+    },
+    {
+      title: "contact",
+      href: "/contact",
+      icon: <Mail className="w-4 inline me-4" />,
+    },
+  ];
   const pathname = usePathname();
 
   const [isSticky, setSticky] = useState(false);
@@ -90,7 +108,7 @@ const Navigation = () => {
                       } mobile-nav-item text-white flex justify-center items-center py-4`}
           >
             <div className="me-2">
-              <i className={link.icon}></i>
+              {link.icon}
             </div>
 
             <span style={{ fontSize: "12px" }}>{link.title.toUpperCase()}</span>

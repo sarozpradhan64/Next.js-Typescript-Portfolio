@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import FrontendLayout from "@/components/layouts/FrontendLayout";
-import metas from "@/data/metaData";
 import Link from "next/link";
 import WorkDetailSkeleton from "@/components/skeleton/WorkDetailSkeleton";
 import ShareButton from "../_partials/ShareButton";
 import workData from "@/data/workData";
+import { Code, ExternalLink, MoveLeft } from "lucide-react";
 
 export default async function Page(props) {
   const params = await props.params;
@@ -37,8 +37,12 @@ export default async function Page(props) {
 
           <div className="md:col-span-3 md:ps-8">
             <div className="mb-3">
-              <Link className="pointer text-primary" href={"/works"}>
-                <i className="fa-solid fa-arrow-left-long me-2"></i>Go Back
+              <Link
+                className="cursor-pointer text-sm text-gray-500 hover:text-gray-200"
+                href={"/works"}
+              >
+                <MoveLeft className="w-4 inline me-2" />
+                Go Back
               </Link>
             </div>
             <div className="project-info">
@@ -74,7 +78,7 @@ export default async function Page(props) {
                     rel="noreferrer"
                     className="md:mx-2 text-primary"
                   >
-                    <i className="me-1 fa-solid fa-arrow-up-right-from-square"></i>
+                    <ExternalLink className="w-4 inline me-2" />
                     View Project
                   </a>
                 )}
@@ -86,7 +90,7 @@ export default async function Page(props) {
                     rel="noreferrer"
                     className="md:mx-2 text-primary"
                   >
-                    <i className="me-1 fa-solid fa-code"></i>
+                  <Code className="w-4 inline me-2" />
                     Source Code
                   </a>
                 )}
