@@ -3,17 +3,17 @@
 import { useEffect } from "react";
 
 interface ReavealOnScrollProps {
-  className: string;
+  className?: string;
   revealGroupName: string;
-  offsetY: string;
-  duration: string;
-  timingFunction: string;
+  offsetY?: string;
+  duration?: string;
+  timingFunction?: string;
   children: React.ReactNode;
 }
 
 const RevealOnScroll: React.FC<ReavealOnScrollProps> = ({
-  className = "",
   revealGroupName,
+  className = "",
   offsetY = "50px",
   duration = "0.5s",
   timingFunction = "ease-in-out",
