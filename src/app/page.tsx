@@ -11,6 +11,7 @@ import SectionTitle from "@/components/SectionTitle";
 import Skills from "@/components/Skills";
 import workData from "@/data/workData";
 import skillsData from "@/data/skillData";
+import { CircleCheckBig } from "lucide-react";
 
 export default async function Home() {
   const works = workData;
@@ -64,15 +65,14 @@ export default async function Home() {
             {metas.user.about}
           </p>
           <p className="mb-3">
-            <i className="far fa-check-circle text-primary me-3"></i>
+            <CircleCheckBig className="w-4 inline me-2 text-secondary" />
             Demand Analysis
           </p>
           <p className="mb-3">
-            <i className="far fa-check-circle text-primary me-3"></i>A Quality
-            Service
+            <CircleCheckBig className="w-4 inline me-2 text-secondary" />A Quality Service
           </p>
           <p className="mb-3">
-            <i className="far fa-check-circle text-primary me-3"></i>
+            <CircleCheckBig className="w-4 inline me-2 text-secondary" />
             Client Satisfaction
           </p>
         </div>
