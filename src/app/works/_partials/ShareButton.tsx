@@ -3,8 +3,13 @@
 import { Share2 } from "lucide-react";
 import React from "react";
 
-export default function ShareButton({ title, url }) {
-  
+export default function ShareButton({
+  title,
+  url,
+}: {
+  title: string;
+  url: string;
+}) {
   const handleShare = async function () {
     try {
       await navigator.share({
