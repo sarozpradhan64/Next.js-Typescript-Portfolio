@@ -6,7 +6,14 @@ import data from "@/data/data";
 import metas from "@/data/metaData";
 import Navigation from "./Navigation";
 import { strTitle } from "@/utils/helpers/stringHelper";
-import { Facebook, Github, Instagram, Linkedin } from "lucide-react";
+import {
+  ChevronRight,
+  Copyright,
+  Facebook,
+  Github,
+  Instagram,
+  Linkedin,
+} from "lucide-react";
 
 export default function FrontendLayout({
   children,
@@ -55,7 +62,7 @@ export default function FrontendLayout({
             {title && (
               <div className="mb-6">
                 <h1 className="text-2xl mb-0 text-white">
-                  <i className="fa-solid fa-caret-right"></i> {title}
+                  <ChevronRight className=" inline me-2 animate-bounce" size={32} /> {title}
                 </h1>
               </div>
             )}
@@ -69,7 +76,7 @@ export default function FrontendLayout({
         <div className="md:mt-32 mt-16 md:mb-0 mb-4 border-t border-gray-600"></div>
         <div className="flex md:flex-row flex-col items-center justify-between text-white py-4 md:mb-0 mb-16">
           <div className="text-center md:text-start mb-3 md:mb-0">
-            <i className="fa-regular fa-copyright"></i> {currentYear} |&nbsp;
+          <Copyright className="inline w-4 me-1" /> {currentYear} |&nbsp;
             <Link className="border-bottom text-secondary" href="/">
               {metas.user.name}
             </Link>

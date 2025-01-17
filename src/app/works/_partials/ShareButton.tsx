@@ -1,5 +1,6 @@
 "use client";
 
+import { Share2 } from "lucide-react";
 import React from "react";
 
 export default function ShareButton({ title, url }) {
@@ -24,7 +25,7 @@ export default function ShareButton({ title, url }) {
       }}
       className="text-primary mx-3"
     >
-      <i className="me-1 fa-solid fa-share-nodes pointer"></i>
+      <Share2 className="cursor-pointer inline w-4 me-2" />
       Share
     </a>
   );
