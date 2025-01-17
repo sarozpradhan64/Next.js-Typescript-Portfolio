@@ -6,8 +6,9 @@ import Image from "next/image";
 import Link from "next/link";
 import CardSkeleton from "./skeleton/CardSkeleton";
 import SectionTitle from "./SectionTitle";
+import { Work } from "@/types/work";
 
-function HighlightedProject({ featuredWorks }) {
+function HighlightedProject({ featuredWorks }: { featuredWorks: Work[] }) {
   return (
     <div className="mt-32">
       <div className="flex items-end justify-between">

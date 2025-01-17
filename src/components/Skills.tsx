@@ -4,8 +4,9 @@ import React, { useMemo, useState } from "react";
 import SectionTitle from "./SectionTitle";
 import Image from "next/image";
 import Button from "./Button";
+import { Skill } from "@/types/skill";
 
-const Skills = ({ skills }) => {
+const Skills = ({ skills }: { skills: Skill[] }) => {
   const [loadMore, setLoadMore] = useState(false);
   const displayedSkills = useMemo(
     () => (loadMore ? skills : skills.slice(0, 12)),

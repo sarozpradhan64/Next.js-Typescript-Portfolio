@@ -1,14 +1,24 @@
 "use client";
 
-import react, { useState, useEffect } from "react";
-export default function RevealOnScroll({
-  children,
-  className = '',
+import { useEffect } from "react";
+
+interface ReavealOnScrollProps {
+  className: string;
+  revealGroupName: string;
+  offsetY: string;
+  duration: string;
+  timingFunction: string;
+  children: React.ReactNode;
+}
+
+const RevealOnScroll: React.FC<ReavealOnScrollProps> = ({
+  className = "",
   revealGroupName,
   offsetY = "50px",
   duration = "0.5s",
   timingFunction = "ease-in-out",
-}) {
+  children,
+}) => {
   useEffect(() => {
     function handleScroll() {
       const elements = document.querySelectorAll(`.${revealGroupName}`);
@@ -44,4 +54,6 @@ export default function RevealOnScroll({
       {children}
     </div>
   );
-}
+};
+
+export default RevealOnScroll;
