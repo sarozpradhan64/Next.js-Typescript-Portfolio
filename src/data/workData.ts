@@ -16,7 +16,7 @@ const workData = [
   {
     title: "Confession Area",
     slug: "confession-area",
-    type: "software",
+    type: "website",
     year: 2024,
     href: "https://confessionarea.com",
     source: null,
