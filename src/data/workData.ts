@@ -14,20 +14,6 @@ const workData = [
     is_featured: true,
   },
   {
-    title: "Confession Area",
-    slug: "confession-area",
-    type: "website",
-    year: 2024,
-    href: "https://confessionarea.com",
-    source: null,
-    image: "/img/works/confession_area.png",
-    description:
-      "A Confession area is a platform where you can Pour your heart out, share your hidden feelings and let everyone relive the moment that you lived.",
-    role: "Fullstack Development",
-    stack: "Django, React, Next.js",
-    is_featured: true,
-  },
-  {
     title: "Training Management System",
     slug: "training-management-system",
     type: "software",
