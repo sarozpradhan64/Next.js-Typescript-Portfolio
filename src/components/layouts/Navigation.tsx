@@ -10,16 +10,25 @@ const Navigation = () => {
     {
       title: "home",
       href: "/",
+      isExternal: false,
       icon: <House className="w-4 inline me-4" />,
     },
 
     {
       title: "works",
+      isExternal: false,
       href: "/works",
       icon: <BriefcaseBusiness className="w-4 inline me-4" />,
     },
     {
+      title: "blogs",
+      isExternal: true,
+      href: "https://blazecodes.pradhansaroj.com.np/?utm_source=saroj-portfolio&utm_id=blazecodes-srz",
+      icon: <BriefcaseBusiness className="w-4 inline me-4" />,
+    },
+    {
       title: "contact",
+      isExternal: false,
       href: "/contact",
       icon: <Mail className="w-4 inline me-4" />,
     },
@@ -69,6 +78,7 @@ const Navigation = () => {
                 {links.map((link, index) => (
                   <Link
                     href={link.href}
+                    target={link.isExternal ? "_blank" : "_self"}
                     key={index}
                     className={`${
                       link.title === "works"
@@ -107,9 +117,7 @@ const Navigation = () => {
                           : ""
                       } mobile-nav-item text-white flex justify-center items-center py-4`}
           >
-            <div className="me-2">
-              {link.icon}
-            </div>
+            <div className="me-2">{link.icon}</div>
 
             <span style={{ fontSize: "12px" }}>{link.title.toUpperCase()}</span>
           </Link>

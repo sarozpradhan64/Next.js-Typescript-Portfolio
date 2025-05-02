@@ -25,7 +25,9 @@ export default async function Home() {
           <h3 className="text-3xl text-primary mb-3 font-bold">
             Hi 👋, I&apos;m
           </h3>
-          <h1 className="text-6xl mb-8 text-white font-medium">{metas.user.name}</h1>
+          <h1 className="text-6xl mb-8 text-white font-medium">
+            {metas.user.name}
+          </h1>
           <h2 className="text-3xl inline text-secondary">
             {metas.user.whoAmI}
           </h2>
@@ -66,14 +68,15 @@ export default async function Home() {
           </p>
           <p className="mb-3">
             <CircleCheckBig className="w-4 inline me-2 text-secondary" />
-            Demand Analysis
+            Requirement Analysis
           </p>
           <p className="mb-3">
-            <CircleCheckBig className="w-4 inline me-2 text-secondary" />A Quality Service
+            <CircleCheckBig className="w-4 inline me-2 text-secondary" />A
+            Quality Solution
           </p>
           <p className="mb-3">
             <CircleCheckBig className="w-4 inline me-2 text-secondary" />
-            Client Satisfaction
+            Ensuring Satisfaction
           </p>
         </div>
 
