@@ -66,14 +66,15 @@ export default async function Home() {
           </p>
           <p className="mb-3">
             <CircleCheckBig className="w-4 inline me-2 text-secondary" />
-            Demand Analysis
+            Requirement Analysis
           </p>
           <p className="mb-3">
-            <CircleCheckBig className="w-4 inline me-2 text-secondary" />A Quality Service
+            <CircleCheckBig className="w-4 inline me-2 text-secondary" />A
+            Quality Solution
           </p>
           <p className="mb-3">
             <CircleCheckBig className="w-4 inline me-2 text-secondary" />
-            Client Satisfaction
+            Ensuring Satisfaction
           </p>
         </div>
 
