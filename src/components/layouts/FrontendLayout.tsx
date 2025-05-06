@@ -29,7 +29,6 @@ const FrontendLayout: React.FC<FrontendLayoutProps> = ({
   description,
 }) => {
   const socials = [
-    // icon uses fontawesome classes
     {
       title: "github",
       href: "https://github.com/sarozpradhan64",
@@ -57,7 +56,7 @@ const FrontendLayout: React.FC<FrontendLayoutProps> = ({
 
   return (
     <>
-      <Meta title={metaTitle || title || ""} description={description || ""} />
+      <Meta title={metaTitle ?? title ?? ""} description={description ?? ""} />
 
       <Navigation />
 
