@@ -1,8 +1,6 @@
-import Head from "next/head";
+
 import Link from "next/link";
 import React from "react";
-import Meta from "../Meta";
-import data from "@/data/data";
 import metas from "@/data/metaData";
 import Navigation from "./Navigation";
 import { strTitle } from "@/utils/helpers/stringHelper";
@@ -17,19 +15,14 @@ import {
 
 interface FrontendLayoutProps {
   title?: string;
-  metaTitle?: string;
-  description?: string;
   children: React.ReactNode;
 }
 
 const FrontendLayout: React.FC<FrontendLayoutProps> = ({
   children,
   title,
-  metaTitle,
-  description,
 }) => {
   const socials = [
-    // icon uses fontawesome classes
     {
       title: "github",
       href: "https://github.com/sarozpradhan64",
@@ -57,8 +50,6 @@ const FrontendLayout: React.FC<FrontendLayoutProps> = ({
 
   return (
     <>
-      <Meta title={metaTitle || title || ""} description={description || ""} />
-
       <Navigation />
 
       <div className="container">

@@ -1,17 +1,34 @@
 import React from "react";
 import Image from "next/image";
-import FrontendLayout from "@/components/layouts/FrontendLayout";
 import Link from "next/link";
+import { Metadata } from "next";
+import FrontendLayout from "@/components/layouts/FrontendLayout";
 import WorkDetailSkeleton from "@/components/skeleton/WorkDetailSkeleton";
 import ShareButton from "../_partials/ShareButton";
 import workData from "@/data/workData";
 import { Code, ExternalLink, MoveLeft } from "lucide-react";
 import { Work } from "@/types/work";
+import { notFound } from "next/navigation";
+import metas from "@/data/metaData";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const slug = params.slug;
+  const work = workData.find((w) => slug === w.slug);
+
+  return {
+    title: work ? `${work.title} - Works | ${metas.user.name}` : "Work Not Found",
+    description: work ? work.description : "Details about the selected work.",
+  };
+}
 
 export default async function Page({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  readonly params: Promise<{ slug: string }>;
 }) {
   const slug = (await params).slug;
   let works: null | Work[] = null;
@@ -22,9 +39,11 @@ export default async function Page({
   }
 
   const work: Work | null = works?.find((w) => slug === w.slug) || null;
-
+  if (!work) {
+    return notFound;
+  }
   return (
-    <FrontendLayout title={`${work?.title || ""}`}>
+    <FrontendLayout title={`${work?.title ?? ""}`}>
       {!work ? (
         <WorkDetailSkeleton />
       ) : (

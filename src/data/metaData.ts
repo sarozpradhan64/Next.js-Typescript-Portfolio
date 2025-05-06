@@ -12,7 +12,7 @@ const metas = {
     "Transform your business with Saroj Pradhan's web application expertise. Custom websites, apps & software tailored for growth. Innovative solutions, optimized performance.",
   photoPath: "/img/photo.webp",
   keywords:
-    "web developer, software developer, freelancer, nepal, freelancer in kathmandu, web developer in kathmandu, Web developer, Custom website design, Web application development, Business software solutions, Full-stack developer, Responsive web design, E-commerce websites, SEO optimization, Business growth technology, Tailored digital solutions, Web performance optimization",
+   ["web developer, software developer, freelancer, nepal, freelancer in kathmandu, web developer in kathmandu, Web developer, Custom website design, Web application development, Business software solutions, Full-stack developer, Responsive web design, E-commerce websites, SEO optimization, Business growth technology, Tailored digital solutions, Web performance optimization"]
 };
 
 export default metas;
