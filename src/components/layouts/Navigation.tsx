@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import data from "@/data/data";
-import { BriefcaseBusiness, House, Mail } from "lucide-react";
+import { BriefcaseBusiness, FilePen, House, Mail } from "lucide-react";
 
 const Navigation = () => {
   const links = [
@@ -24,7 +24,7 @@ const Navigation = () => {
       title: "blogs",
       isExternal: true,
       href: "https://blazecodes.pradhansaroj.com.np/?utm_source=saroj-portfolio&utm_id=blazecodes-srz",
-      icon: <BriefcaseBusiness className="w-4 inline me-4" />,
+      icon: <FilePen className="w-4 inline me-4" />,
     },
     {
       title: "contact",
