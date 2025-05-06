@@ -100,7 +100,7 @@ const Navigation = () => {
       </div>
 
       {/* mobile nav */}
-      <div className="md:hidden grid grid-cols-3 fixed left-0 right-0 z-50 bottom-0 bg-primary">
+      <div className="md:hidden grid grid-cols-4 fixed left-0 right-0 z-50 bottom-0 bg-primary">
         {links.map((link, index) => (
           <Link
             href={link.href}
@@ -117,7 +117,7 @@ const Navigation = () => {
                           : ""
                       } mobile-nav-item text-white flex justify-center items-center py-4`}
           >
-            <div className="me-2">{link.icon}</div>
+            <div className="me-1">{link.icon}</div>
 
             <span style={{ fontSize: "12px" }}>{link.title.toUpperCase()}</span>
           </Link>
