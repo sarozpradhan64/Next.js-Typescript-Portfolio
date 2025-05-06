@@ -1,11 +1,8 @@
-"use client";
-
-import React, { Suspense } from "react";
-import RevealOnScroll from "./Reveal";
+import React from "react";
+import RevealOnScroll from "../Reveal";
 import Image from "next/image";
 import Link from "next/link";
-import CardSkeleton from "./skeleton/CardSkeleton";
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "../SectionTitle";
 import { Work } from "@/types/work";
 
 function HighlightedProject({ featuredWorks }: { featuredWorks: Work[] }) {
@@ -26,7 +23,11 @@ function HighlightedProject({ featuredWorks }: { featuredWorks: Work[] }) {
 
       <div className="mt-8">
         {featuredWorks && featuredWorks.length >= 1 ? (
-          <div className={"grid lg:grid-cols-3 md:grid-cols-2 md:gap-x-5 md:gap-5 gap-4"}>
+          <div
+            className={
+              "grid lg:grid-cols-3 md:grid-cols-2 md:gap-x-5 md:gap-5 gap-4"
+            }
+          >
             {featuredWorks.map((work, index) => (
               <RevealOnScroll
                 key={index}
