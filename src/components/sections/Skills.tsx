@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useMemo, useState } from "react";
-import SectionTitle from "../SectionTitle";
 import Image from "next/image";
+import SectionTitle from "../SectionTitle";
 import Button from "../Button";
 import { Skill } from "@/types/skill";
 
