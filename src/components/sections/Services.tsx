@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import data from "@/data/data";
-import RevealOnScroll from "./Reveal";
-import SectionTitle from "./SectionTitle";
+import RevealOnScroll from "../Reveal";
+import SectionTitle from "../SectionTitle";
 
 export default function Services() {
   const services = data.services;

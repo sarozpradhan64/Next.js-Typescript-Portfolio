@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useMemo, useState } from "react";
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "../SectionTitle";
 import Image from "next/image";
-import Button from "./Button";
+import Button from "../Button";
 import { Skill } from "@/types/skill";
 
 const Skills = ({ skills }: { skills: Skill[] }) => {
